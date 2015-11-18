@@ -1,0 +1,70 @@
+# Page object
+page = PAGE
+
+temp.content = CONTENT
+temp.content {
+	table = tt_content
+	select {
+		where = colPos=1
+		languageField = sys_language_uid
+		orderBy = sorting
+	}
+}
+
+temp.layout = TEXT
+temp.layout.data = TSFE:page|layout
+
+page {
+	meta.viewport = width=device-width, initial-scale=1, maximum-scale=1
+
+	includeCSS {
+		css = EXT:website/Resources/Public/css/styles.min.css
+	}
+
+	includeJSFooter {
+		js = EXT:website/Resources/Public/js/scripts.min.js
+	}
+
+	includeJSlibs {
+		modernizr = EXT:website/Resources/Public/js/modernizr.min.js
+		modernizr.forceOnTop = 1
+	}
+
+	shortcutIcon = EXT:website/Resources/Public/Icons/favicon.ico
+
+	10 = FLUIDTEMPLATE
+	10 {
+		file {
+			cObject = TEXT
+			cObject {
+				data = levelfield: -1, backend_layout_next_level, slide
+				override {
+					data = TSFE:page|backend_layout
+				}
+				ifEmpty = Default
+				split {
+					token = pagets__
+					1.current = 1
+					1.wrap = |
+				}
+				wrap = typo3conf/ext/website/Resources/Private/Templates/|.html
+				case = ucfirst
+			}
+		}
+
+		layoutRootPaths.0 = EXT:website/Resources/Private/Layouts/
+		partialRootPaths.0 = EXT:website/Resources/Private/Partials/
+		templateRootPaths.0 = EXT:website/Resources/Private/Templates/
+
+		settings {
+			sitename = {$plugin.website.settings.sitename}
+		}
+
+		variables {
+			content < temp.content
+			sidebar < temp.content
+			sidebar.select.where = colPos=0
+			layout < temp.layout
+		}
+	}
+}

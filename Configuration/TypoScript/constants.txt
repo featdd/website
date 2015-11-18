@@ -1,0 +1,6 @@
+plugin.website {
+	settings {
+		# cat=plugin.website/others; type=string; label=The Websites name
+		sitename = TYPO3
+	}
+}

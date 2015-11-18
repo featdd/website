@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2015-11-18T11:00:00Z" product-name="site">
+		<header/>
+		<body>
+
+			<trans-unit id="backendlayout.sidebar">
+				<target>Seitenleiste</target>
+			</trans-unit>
+			<trans-unit id="backendlayout.content">
+				<target>Inhaltsbereich</target>
+			</trans-unit>
+
+
+
+			<trans-unit id="layout.sidebar_left">
+				<target>Seitenleiste links</target>
+			</trans-unit>
+			<trans-unit id="layout.sidebar_right">
+				<target>Seitenleiste rechts</target>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>

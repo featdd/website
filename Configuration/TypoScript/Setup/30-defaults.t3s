@@ -1,0 +1,31 @@
+lib.parseFunc_RTE {
+	externalBlocks.table.HTMLtableCells {
+		default >
+		default.stdWrap.parseFunc =< lib.parseFunc
+	}
+	nonTypoTagStdWrap.encapsLines.addAttributes.P.class >
+}
+
+tt_content.stdWrap.innerWrap >
+lib.stdheader.3.headerClass >
+
+# Allow all css classes for tables
+lib.parseFunc_RTE.externalBlocks.table.stdWrap.HTMLparser.tags.table.fixAttrib.class.list >
+
+# Allow all css classes for tables
+lib.parseFunc_RTE.externalBlocks.table.stdWrap.HTMLparser.tags.table.fixAttrib.class.list >
+
+# Remove standard rendering of headlines from FCEs
+tt_content.fluidcontent_content.10 >
+
+# Remove CSC default CSS
+plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE >
+
+# Remove CSC default wraps
+tt_content.stdWrap.innerWrap >
+
+# Remove CSC header wraps
+lib.stdheader {
+	3 >
+	stdWrap.dataWrap >
+}

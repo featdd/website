@@ -1,0 +1,24 @@
+<html data-namespace-typo3-fluid="true" lang="en"
+	  xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+	<div id="page">
+
+		<f:render partial="Header" section="Header" arguments="{_all}"/>
+
+		<section class="main">
+			<f:if condition="{layout} == 0">
+				<f:then>
+					<f:render section="SidebarLeft"/>
+				</f:then>
+				<f:else>
+					<f:render section="SidebarRight"/>
+				</f:else>
+			</f:if>
+		</section>
+
+		<f:render partial="Footer" section="Footer" arguments="{_all}"/>
+
+	</div>
+
+</html>
