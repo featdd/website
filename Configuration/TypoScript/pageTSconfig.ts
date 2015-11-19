@@ -16,7 +16,7 @@ TCEFORM {
 		imagecols.disabled = 1
 
 		# Disable image norows
-		image_noRows.disabled=1
+		image_noRows.disabled = 1
 
 		# Disable image border
 		imageborder.disabled = 1
@@ -57,6 +57,27 @@ TCEFORM {
 		# Disable frame
 		section_frame.disabled = 1
 
+		# Table background color
+		table_bgColor.disabled = 1
+
+		# Table border
+		table_border.disabled = 1
+
+		# Table cell spacing
+		table_cellspacing.disabled = 1
+
+		# Table cell padding
+		table_cellpadding.disabled = 1
+
+		# File size
+		filelink_size.disabled = 1
+
+		# Upload description
+		uploads_description.disabled = 1
+
+		# Upload type
+		uploads_type.disabled = 1
+
 		# Disable description
 		rowDescription.disabled = 1
 
@@ -67,16 +88,26 @@ TCEFORM {
 		header_position.disabled = 1
 	}
 
-	pages.layout {
-		altLabels.0 = LLL:EXT:website/Resources/Private/Language/locallang.xlf:layout.sidebar_left
-		altLabels.1 = LLL:EXT:website/Resources/Private/Language/locallang.xlf:layout.sidebar_right
-		removeItems = 2,3
+	pages {
+		cache_timeout.disabled = 1
+		cache_tags.disabled = 1
+		url_scheme.disabled = 1
+		fe_login_mode.disabled = 1
+		tx_realurl_pathsegment.disabled = 1
+		tx_realurl_exclude.disabled = 1
+
+		layout {
+			altLabels.0 = LLL:EXT:website/Resources/Private/Language/locallang.xlf:layout.sidebar_left
+			altLabels.1 = LLL:EXT:website/Resources/Private/Language/locallang.xlf:layout.sidebar_right
+			removeItems = 2,3
+		}
 	}
 }
 
-RTE.default {
-	contentCSS = EXT:website/Resources/Public/css/rte.css
-	showButtons (
+RTE {
+	default {
+		contentCSS = EXT:website/Resources/Public/css/rte.css
+		showButtons (
 		blockstylelabel, blockstyle, textstylelabel, textstyle, linebreak,
 		formatblock, bar, bold, italic, bar, orderedlist, unorderedlist,
 		indent, bar, link, unlink, removeformat, linebreak,
@@ -84,11 +115,17 @@ RTE.default {
 		rowinsertunder, rowdelete, rowsplit, columninsertbefore, columninsertafter,
 		columndelete, columnsplit, cellproperties, cellinsertbefore, cellinsertafter,
 		celldelete, cellsplit, cellmerge, image, insertcharacter, chMode
-	)
-	keepButtonGroupTogether = 1
-	proc.allowedClasses = download,more,back,pdf
-	buttons.formatblock.removeItems = h1,h4,h5,h6,section,div,footer,header,nav,aside,blockquote,pre,address,article
-	buttons.link.properties.class.allowedClasses = more,back,download,pdf
+		)
+		keepButtonGroupTogether = 1
+		proc.allowedClasses = download,pdf
+		buttons.formatblock.removeItems = h1,h4,h5,h6,section,div,footer,header,nav,aside,blockquote,pre,address,article
+		buttons.link.properties.class.allowedClasses = more,back,download,pdf
+	}
+
+	classes {
+		download.name = Download
+		pdf.name = PDF-Dokument
+	}
 }
 
 mod {
@@ -122,7 +159,7 @@ mod {
 					}
 				}
 			}
-			icon = EXT:website/Resources/Public/Icons/BackendLayout_Default.png
+			icon = EXT:website/Resources/Public/icons/BackendLayout_Default.png
 		}
 	}
 }

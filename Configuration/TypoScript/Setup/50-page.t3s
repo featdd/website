@@ -30,7 +30,7 @@ page {
 		modernizr.forceOnTop = 1
 	}
 
-	shortcutIcon = EXT:website/Resources/Public/Icons/favicon.ico
+	shortcutIcon = EXT:website/Resources/Public/icons/favicon.ico
 
 	10 = FLUIDTEMPLATE
 	10 {

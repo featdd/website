@@ -29,3 +29,97 @@ lib.stdheader {
 	3 >
 	stdWrap.dataWrap >
 }
+
+# custom image rendering
+tt_content.image.20 {
+	imageStdWrap.dataWrap >
+	imageColumnStdWrap.dataWrap >
+	imageTextSplit = 1
+	cols = 2
+	renderMethod = figure
+	rendering {
+		figure {
+			imageRowStdWrap.dataWrap = <div class="image-row-{field:imagecols}"> | </div>
+			imageLastRowStdWrap.dataWrap = <div class="image-row-{field:imagecols} last"> | </div>
+			noRowsStdWrap.wrap =
+			oneImageStdWrap.dataWrap = <div class="image-column-{field:imagecols}"> | </div>
+			imgTagStdWrap.wrap = <figure> | </figure>
+			editIconsStdWrap.wrap = <div> | </div>
+			caption {
+				wrap = <figcaption> | </figcaption>
+				required = 1
+				split {
+					token = #
+					cObjNum =  1 |*| 1 |*| 2
+					1 = TEXT
+					1.current = 1
+					1.wrap = <strong> | </strong><br>
+					2 = TEXT
+					2.current = 1
+					2.wrap =
+				}
+			}
+		}
+	}
+
+	layout {
+		# above-center
+		default = TEXT
+		default {
+			value = <div class="images">###IMAGES######TEXT###</div>
+			override >
+		}
+		# above-right
+		1 >
+		# above-left
+		2 >
+		# below-center
+		8 >
+		# below-right
+		9 >
+		# below-left
+		10 >
+		# intext-right
+		17 >
+		# intext-left
+		18 >
+		# intext-right-nowrap
+		25 >
+		# intext-left-nowrap
+		26 >
+	}
+
+	# enable fancybox as lightbox
+	1 {
+		params = class="scale"
+		imageLinkWrap >
+		imageLinkWrap = 1
+		imageLinkWrap {
+			enable.field = image_zoom
+			enable.ifEmpty.typolink.parameter.field = image_link
+			enable.ifEmpty.typolink.parameter.listNum.stdWrap.data = register : IMAGE_NUM_CURRENT
+			enable.ifEmpty.typolink.returnLast = url
+
+			typolink {
+				target = {$styles.content.links.target}
+				extTarget = {$styles.content.links.extTarget}
+
+				parameter.cObject = IMG_RESOURCE
+				parameter.cObject.file.import.data = TSFE:lastImageInfo|origFile
+
+				parameter.override.field = image_link
+				parameter.override.listNum.stdWrap.data = register : IMAGE_NUM_CURRENT
+				parameter.override.if.isTrue.field = image_link
+
+				ATagParams = rel="gallery-{field:uid}" title="{field:header}" class="fancybox"
+				ATagParams.override.cObject = TEXT
+				ATagParams.override.cObject {
+					value = title="{field:header}" class="fancybox"
+					if.isTrue.field = image_link
+				}
+				ATagParams.insertData = 1
+				ATagParams.if.isTrue.field = image_zoom
+			}
+		}
+	}
+}

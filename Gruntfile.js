@@ -32,6 +32,8 @@ module.exports = function (grunt) {
     cssmin: {
       dist: {
         src: [
+          'bower_components/bootstrap/dist/css/bootstrap.min.css',
+          'bower_components/fancybox/source/jquery.fancybox.css',
           '.temp/main.css'
         ],
         dest: 'Resources/Public/css/styles.min.css'
@@ -52,6 +54,8 @@ module.exports = function (grunt) {
         files: {
           'Resources/Public/js/scripts.min.js': [
             'bower_components/jquery/dist/jquery.min.js',
+            'bower_components/bootstrap/dist/js/bootstrap.min.js',
+            'bower_components/fancybox/source/jquery.fancybox.pack.js',
             'Resources/Private/Assets/js/main.js'
           ]
         }
@@ -65,6 +69,19 @@ module.exports = function (grunt) {
           src: '**/*.{gif,jpeg,jpg,png}',
           dest: 'Resources/Public/images'
         }]
+      }
+    },
+    copy: {
+      fancybox: {
+        expand: true,
+        src: ['bower_components/fancybox/source/*.{git|png}'],
+        dest: 'Resources/Public/images/fancybox/'
+      },
+      icons: {
+        expand: true,
+        cwd: 'Resources/Private/Assets/icons',
+        src: '**/*.{ico,svg,png,gif}',
+        dest: 'Resources/Public/icons/'
       }
     },
     modernizr: {
@@ -101,6 +118,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('styles', ['sass', 'autoprefixer', 'cssmin:dist', 'clean']);
   grunt.registerTask('scripts', ['jshint', 'uglify:dist', 'clean']);
-  grunt.registerTask('build', ['styles', 'scripts', 'modernizr', 'imagemin']);
+  grunt.registerTask('build', ['styles', 'scripts', 'modernizr', 'imagemin', 'copy']);
   grunt.registerTask('default', ['build', 'watch']);
 };

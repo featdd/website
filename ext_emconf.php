@@ -18,6 +18,8 @@ $EM_CONF[$_EXTKEY] = array(
 			'typo3' => '7.6.0',
 		),
 		'conflicts' => array(),
-		'suggests' => array(),
+		'suggests' => array(
+			'realurl' => '1.10.0-0.0.0'
+		)
 	),
 );
