@@ -1,0 +1,36 @@
+<html data-namespace-typo3-fluid="true" lang="en"
+	  xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+	<f:render partial="Header" arguments="{_all}" />
+
+	<div class="textmedia{f:if(condition: '{data.imageorient} == 17', then: ' image-right', else: ' image-left')}">
+		<f:if condition="{files}">
+			<div class="image">
+				<f:for each="{files}" as="file" iteration="iterator">
+					<f:if condition="{data.image_zoom}">
+						<f:then>
+							<a href="{file.originalFile.publicUrl}" rel="gallery-{data.uid}" title="{file.title}" class="fancybox{f:if(condition: '{iterator.index} > 0', then: ' hidden')}">
+								<f:image src="{file.originalFile.publicUrl}" width="400" title="{file.title}" alt="{file.alternative}" class="img-responsive"/>
+							</a>
+						</f:then>
+						<f:else>
+							<f:if condition="{iteration.index} == 0">
+								<f:link.typolink parameter="{file.link}">
+									<f:image src="{file.originalFile.publicUrl}" width="400" title="{file.title}" alt="{file.alternative}" class="img-responsive"/>
+								</f:link.typolink>
+							</f:if>
+						</f:else>
+					</f:if>
+				</f:for>
+			</div>
+		</f:if>
+
+		<div class="text">
+			<f:format.html>{data.bodytext}</f:format.html>
+		</div>
+	</div>
+
+	<div style="clear: both;"></div>
+
+</html>

@@ -10,7 +10,7 @@ TCEFORM {
 		header_layout.removeItems = 0,4,5,6,7,8,9,10,100
 
 		# Disable image orientation
-		imageorient.disabled = 1
+		imageorient.removeItems = 0,1,2,8,9,10,25,26
 
 		# Disable image columns
 		imagecols.disabled = 1
@@ -44,6 +44,12 @@ TCEFORM {
 
 		# Disable image caption position
 		imagecaption_position.disabled = 1
+
+		# Disable show in menu checkbox
+		sectionIndex.disabled = 1
+
+		# Disable link to top
+		linkToTop.disabled = 1
 
 		# Disable layout selection
 		layout.disabled = 1
@@ -110,7 +116,7 @@ RTE {
 		showButtons (
 		blockstylelabel, blockstyle, textstylelabel, textstyle, linebreak,
 		formatblock, bar, bold, italic, bar, orderedlist, unorderedlist,
-		indent, bar, link, unlink, removeformat, linebreak,
+		indent, bar, link, unlink, removeformat, undo, redo, linebreak,
 		table, toggleborders, tableproperties, rowproperties, rowinsertabove,
 		rowinsertunder, rowdelete, rowsplit, columninsertbefore, columninsertafter,
 		columndelete, columnsplit, cellproperties, cellinsertbefore, cellinsertafter,
@@ -132,6 +138,18 @@ mod {
 	SHARED {
 		defaultLanguageFlag = de
 		defaultLanguageLabel = Deutsch
+	}
+
+	wizards.newContentElement.wizardItems.common {
+		elements {
+			website_gallery {
+				iconIdentifier = content-image
+				title = LLL:EXT:website/Resources/Private/Language/locallang.xlf:website_newcontentelement.gallery.title
+				description = LLL:EXT:website/Resources/Private/Language/locallang.xlf:website_newcontentelement.gallery.description
+				tt_content_defValues.CType = website_gallery
+			}
+		}
+		show := addToList(website_gallery)
 	}
 
 	web_layout.BackendLayouts {

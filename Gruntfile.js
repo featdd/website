@@ -32,7 +32,6 @@ module.exports = function (grunt) {
     cssmin: {
       dist: {
         src: [
-          'bower_components/bootstrap/dist/css/bootstrap.min.css',
           'bower_components/fancybox/source/jquery.fancybox.css',
           '.temp/main.css'
         ],
@@ -74,7 +73,9 @@ module.exports = function (grunt) {
     copy: {
       fancybox: {
         expand: true,
-        src: ['bower_components/fancybox/source/*.{git|png}'],
+        flatten: true,
+        cwd: 'bower_components/fancybox',
+        src: '**/*.{gif,png}',
         dest: 'Resources/Public/images/fancybox/'
       },
       icons: {

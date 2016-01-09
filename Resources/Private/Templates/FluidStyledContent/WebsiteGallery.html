@@ -1,0 +1,26 @@
+<html data-namespace-typo3-fluid="true" lang="en"
+	  xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+	<f:render partial="Header" arguments="{_all}" />
+
+	<div class="gallery">
+		<f:for each="{files}" as="file" iteration="iterator">
+			<div class="image">
+				<f:if condition="{data.image_zoom}">
+					<f:then>
+						<a href="{file.originalFile.publicUrl}" rel="gallery-{data.uid}" title="{file.title}" class="fancybox">
+							<f:image src="{file.originalFile.publicUrl}" width="400" height="300c" title="{file.title}" alt="{file.alternative}" class="scale"/>
+						</a>
+					</f:then>
+					<f:else>
+						<f:link.typolink parameter="{file.link}">
+							<f:image src="{file.originalFile.publicUrl}" width="400" height="300c" title="{file.title}" alt="{file.alternative}" class="scale"/>
+						</f:link.typolink>
+					</f:else>
+				</f:if>
+			</div>
+		</f:for>
+	</div>
+
+</html>

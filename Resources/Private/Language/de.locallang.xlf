@@ -20,6 +20,15 @@
 				<target>Seitenleiste rechts</target>
 			</trans-unit>
 
+
+
+			<trans-unit id="website_newcontentelement.gallery.title">
+				<target>Bilder Gallerie</target>
+			</trans-unit>
+			<trans-unit id="website_newcontentelement.gallery.description">
+				<target>Ein Gallerie Element für mehrere Bilder</target>
+			</trans-unit>
+
 		</body>
 	</file>
 </xliff>

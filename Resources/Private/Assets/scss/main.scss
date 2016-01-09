@@ -1,3 +1,5 @@
+@import '../../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
+
 $white:    #fff;
 $grey:     #9d9d9d;
 $darkgrey: #555;
@@ -20,9 +22,43 @@ header {
 }
 
 img.scale {
-  width: 100%;
-  height: auto;
   display: block;
+  height: auto;
+  width: 100%;
+}
+
+.textmedia {
+  .image {width: 33%;}
+
+  &.image-right .image {
+    float: right;
+    margin: 0 0 10px 10px;
+  }
+
+  &.image-left .image {
+    float: left;
+    margin: 0 10px 10px 0;
+  }
+}
+
+.gallery {
+  font-size: 0;
+
+  .image {
+    width: 100%;
+
+    @media (max-width: $screen-xs-min - 1) {
+      &:not(:first-child) {display: none;}
+    }
+
+    @media (min-width: $screen-xs-min) {
+      display: inline-block;
+      margin-bottom: 2%;
+      margin-right: 2%;
+      width: 32%;
+      &:nth-child(3n) {margin-right: 0;}
+    }
+  }
 }
 
 //Fancybox overwrite
@@ -33,6 +69,8 @@ img.scale {
 .fancybox-close,
 .fancybox-prev span,
 .fancybox-next span {background-image: url('../images/fancybox/fancybox_sprite.png');}
+
+.fancybox-lock .fancybox-overlay {overflow-y: hidden;}
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
        only screen and (min--moz-device-pixel-ratio: 1.5),

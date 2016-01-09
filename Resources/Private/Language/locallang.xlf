@@ -20,6 +20,15 @@
 				<source>Sidebar right</source>
 			</trans-unit>
 
+
+
+			<trans-unit id="website_newcontentelement.gallery.title">
+				<source>Image Gallery</source>
+			</trans-unit>
+            <trans-unit id="website_newcontentelement.gallery.description">
+				<source>A gallery element for multiple images</source>
+			</trans-unit>
+
 		</body>
 	</file>
 </xliff>

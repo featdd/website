@@ -15,15 +15,17 @@ temp.layout = TEXT
 temp.layout.data = TSFE:page|layout
 
 page {
-	meta.viewport = width=device-width, initial-scale=1, maximum-scale=1
-
-	includeCSS {
-		css = EXT:website/Resources/Public/css/styles.min.css
+	meta {
+		keywords.field = keywords
+		description.field = description
+		abstract.field = abstract
+		author.field = author
+		viewport = width=device-width, initial-scale=1, maximum-scale=1
 	}
 
-	includeJSFooter {
-		js = EXT:website/Resources/Public/js/scripts.min.js
-	}
+	includeCSS.css = EXT:website/Resources/Public/css/styles.min.css
+
+	includeJSFooter.js = EXT:website/Resources/Public/js/scripts.min.js
 
 	includeJSlibs {
 		modernizr = EXT:website/Resources/Public/js/modernizr.min.js
@@ -38,9 +40,7 @@ page {
 			cObject = TEXT
 			cObject {
 				data = levelfield: -1, backend_layout_next_level, slide
-				override {
-					data = TSFE:page|backend_layout
-				}
+				override.data = TSFE:page|backend_layout
 				ifEmpty = Default
 				split {
 					token = pagets__
@@ -56,9 +56,7 @@ page {
 		partialRootPaths.0 = EXT:website/Resources/Private/Partials/
 		templateRootPaths.0 = EXT:website/Resources/Private/Templates/
 
-		settings {
-			sitename = {$plugin.website.settings.sitename}
-		}
+		settings.sitename = {$plugin.website.settings.sitename}
 
 		variables {
 			content < temp.content

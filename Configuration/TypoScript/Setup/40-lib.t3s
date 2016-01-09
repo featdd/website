@@ -1,3 +1,9 @@
+lib.fluidContent {
+	layoutRootPaths.20 = EXT:website/Resources/Private/Layouts/FluidStyledContent
+	templateRootPaths.20 = EXT:website/Resources/Private/Templates/FluidStyledContent
+	partialRootPaths.20 = EXT:website/Resources/Private/Partials/FluidStyledContent
+}
+
 lib.menu = HMENU
 lib.menu {
 
