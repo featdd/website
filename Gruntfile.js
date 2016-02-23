@@ -111,10 +111,12 @@ module.exports = function (grunt) {
         tasks: ['scripts']
       }
     },
-    clean: [
-      '.temp',
-      '.sass-cache'
-    ]
+    clean: {
+      options: {
+        'force': true
+      },
+      temp: ['.temp', '.sass-cache']
+    }
   });
 
   grunt.registerTask('styles', ['sass', 'autoprefixer', 'cssmin:dist', 'clean']);
