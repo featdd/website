@@ -1,5 +1,5 @@
 <?php
-namespace DPN\Website\Hooks;
+namespace Featdd\Website\Hooks;
 
 /***************************************************************
  *  Copyright notice
