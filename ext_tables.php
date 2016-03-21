@@ -37,4 +37,4 @@ $GLOBALS['TCA']['tt_content']['types']['website_gallery'] = array(
 );
 
 // Register for hook to show preview of tt_content element of CType="website_gallery" in page module
-$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/class.tx_cms_layout.php']['tt_content_drawItem']['website_gallery'] = \DPN\Website\Hooks\WebsiteGalleryPreviewRenderer::class;
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/class.tx_cms_layout.php']['tt_content_drawItem']['website_gallery'] = \Featdd\Website\Hooks\WebsiteGalleryPreviewRenderer::class;

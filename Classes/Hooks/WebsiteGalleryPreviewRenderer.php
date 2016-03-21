@@ -4,7 +4,7 @@ namespace Featdd\Website\Hooks;
 /***************************************************************
  *  Copyright notice
  *
- *  (c) 2015 Daniel Dorndorf <dorndorf@dreipunktnull.com>, dreipunktnull
+ *  (c) 2016 Daniel Dorndorf <dorndorf@dreipunktnull.com>, dreipunktnull
  *
  *  All rights reserved
  *
@@ -32,15 +32,15 @@ use TYPO3\CMS\Backend\View\PageLayoutViewDrawItemHookInterface;
  * Contains a preview rendering for the page module of CType="website_gallery"
  */
 class WebsiteGalleryPreviewRenderer implements PageLayoutViewDrawItemHookInterface {
-	
+
 	/**
 	 * Preprocesses the preview rendering of a content element of type "website_gallery"
 	 *
-	 * @param \TYPO3\CMS\Backend\View\PageLayoutView $parentObject Calling parent object
-	 * @param bool $drawItem Whether to draw the item using the default functionality
-	 * @param string $headerContent Header content
-	 * @param string $itemContent Item content
-	 * @param array $row Record row of tt_content
+	 * @param PageLayoutView $parentObject  Calling parent object
+	 * @param bool           $drawItem      Whether to draw the item using the default functionality
+	 * @param string         $headerContent Header content
+	 * @param string         $itemContent   Item content
+	 * @param array          $row           Record row of tt_content
 	 *
 	 * @return void
 	 */
@@ -53,7 +53,7 @@ class WebsiteGalleryPreviewRenderer implements PageLayoutViewDrawItemHookInterfa
 				);
 			}
 
-			$drawItem = false;
+			$drawItem = FALSE;
 		}
 	}
 }
