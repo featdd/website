@@ -53,7 +53,7 @@ module.exports = function (grunt) {
         files: {
           'Resources/Public/js/scripts.min.js': [
             'bower_components/jquery/dist/jquery.min.js',
-            'bower_components/bootstrap/dist/js/bootstrap.min.js',
+            'bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js',
             'bower_components/fancybox/source/jquery.fancybox.pack.js',
             'Resources/Private/Assets/js/main.js'
           ]

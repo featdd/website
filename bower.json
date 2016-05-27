@@ -7,11 +7,11 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "jquery": "~2.2.0",
+    "jquery": "~2.2.4",
     "fancybox": "~2.1.5",
     "bootstrap-sass": "bootstrap-sass-official#~3.3.6"
   },
   "resolutions": {
-    "jquery": "~2.2.0"
+    "jquery": "~2.2.4"
   }
 }
