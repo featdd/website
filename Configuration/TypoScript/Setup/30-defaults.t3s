@@ -1,9 +1,10 @@
 lib.parseFunc_RTE {
-	externalBlocks.table.HTMLtableCells {
-		default >
-		default.stdWrap.parseFunc =< lib.parseFunc
-	}
-	nonTypoTagStdWrap.encapsLines.addAttributes.P.class >
+    externalBlocks.table.HTMLtableCells {
+        default >
+        default.stdWrap.parseFunc =< lib.parseFunc
+    }
+
+    nonTypoTagStdWrap.encapsLines.addAttributes.P.class >
 }
 
 # Allow all css classes for tables
@@ -13,18 +14,18 @@ lib.parseFunc_RTE.externalBlocks.table.stdWrap.HTMLparser.tags.table.fixAttrib.c
 lib.parseFunc_RTE.externalBlocks.table.stdWrap.HTMLparser.tags.table.fixAttrib.class.list >
 
 tt_content {
-	# Remove CSC default wraps
-	stdWrap.innerWrap >
+    # Remove CSC default wraps
+    stdWrap.innerWrap >
 
-	# Remove standard rendering of headlines from FCEs
-	fluidcontent_content.10 >
+    # Remove standard rendering of headlines from FCEs
+    fluidcontent_content.10 >
 
-	website_gallery =< lib.fluidContent
-	website_gallery {
-		templateName = WebsiteGallery
-		dataProcessing {
-			10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
-			10.references.fieldName = media
-		}
-	}
+    website_gallery =< lib.fluidContent
+    website_gallery {
+        templateName = WebsiteGallery
+        dataProcessing {
+            10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            10.references.fieldName = media
+        }
+    }
 }
