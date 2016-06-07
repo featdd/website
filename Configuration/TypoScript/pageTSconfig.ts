@@ -6,6 +6,7 @@ TCEFORM {
 			2 = Unterüberschrift (H2)
 			3 = Unterüberschrift (H3)
 		}
+
 		# Remove not used headline layout labels
 		header_layout.removeItems = 0,4,5,6,7,8,9,10,100
 
@@ -114,18 +115,21 @@ RTE {
 	default {
 		contentCSS = EXT:website/Resources/Public/css/rte.css
 		showButtons (
-		blockstylelabel, blockstyle, textstylelabel, textstyle, linebreak,
-		formatblock, bar, bold, italic, bar, orderedlist, unorderedlist,
-		indent, bar, link, unlink, removeformat, undo, redo, linebreak,
-		table, toggleborders, tableproperties, rowproperties, rowinsertabove,
-		rowinsertunder, rowdelete, rowsplit, columninsertbefore, columninsertafter,
-		columndelete, columnsplit, cellproperties, cellinsertbefore, cellinsertafter,
-		celldelete, cellsplit, cellmerge, image, insertcharacter, chMode
+			blockstylelabel, blockstyle, textstylelabel, textstyle, linebreak,
+			formatblock, bar, bold, italic, bar, orderedlist, unorderedlist,
+			indent, bar, link, unlink, removeformat, undo, redo, linebreak,
+			table, toggleborders, tableproperties, rowproperties, rowinsertabove,
+			rowinsertunder, rowdelete, rowsplit, columninsertbefore, columninsertafter,
+			columndelete, columnsplit, cellproperties, cellinsertbefore, cellinsertafter,
+			celldelete, cellsplit, cellmerge, image, insertcharacter, chMode, pastetoggle
 		)
 		keepButtonGroupTogether = 1
 		proc.allowedClasses = download,pdf
-		buttons.formatblock.removeItems = h1,h4,h5,h6,section,div,footer,header,nav,aside,blockquote,pre,address,article
-		buttons.link.properties.class.allowedClasses = more,back,download,pdf
+		buttons {
+			formatblock.removeItems = h1,h4,h5,h6,section,div,footer,header,nav,aside,blockquote,pre,address,article
+			link.properties.class.allowedClasses = download,pdf
+			pastetoggle.setActiveOnRteOpen = 1
+		}
 	}
 
 	classes {
@@ -149,6 +153,7 @@ mod {
 				tt_content_defValues.CType = website_gallery
 			}
 		}
+
 		show := addToList(website_gallery)
 	}
 
@@ -167,6 +172,7 @@ mod {
 									colspan = 1
 									colPos = 0
 								}
+
 								2 {
 									name = LLL:EXT:website/Resources/Private/Language/locallang.xlf:backendlayout.content
 									colspan = 2
@@ -177,6 +183,7 @@ mod {
 					}
 				}
 			}
+
 			icon = EXT:website/Resources/Public/icons/BackendLayout_Default.png
 		}
 	}
