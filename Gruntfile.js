@@ -83,6 +83,12 @@ module.exports = function (grunt) {
         cwd: 'Resources/Private/Assets/icons',
         src: '**/*.{ico,svg,png,gif}',
         dest: 'Resources/Public/icons/'
+      },
+      fonts: {
+        expand: true,
+        cwd: 'bower_components/bootstrap/fonts',
+        src: '**/*.{eot,svg,ttf,woff,woff2}',
+        dest: 'Resources/Public/fonts/'
       }
     },
     modernizr: {
