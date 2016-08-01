@@ -1,0 +1,7 @@
+plugin.tx_website {
+    settings {
+        sitename = {$plugin.website.settings.sitename}
+        notFoundPageUid = {$plugin.website.settings.notFoundPageUid}
+        unauthorizedPageUid = {$plugin.website.settings.unauthorizedPageUid}
+    }
+}
