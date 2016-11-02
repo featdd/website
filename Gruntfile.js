@@ -32,7 +32,7 @@ module.exports = function (grunt) {
     cssmin: {
       dist: {
         src: [
-          'bower_components/fancybox/source/jquery.fancybox.css',
+          'Resources/Private/Assets/vendor/fancybox/source/jquery.fancybox.css',
           '.temp/main.css'
         ],
         dest: 'Resources/Public/css/styles.min.css'
@@ -52,9 +52,9 @@ module.exports = function (grunt) {
       dist: {
         files: {
           'Resources/Public/js/scripts.min.js': [
-            'bower_components/jquery/dist/jquery.min.js',
-            'bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js',
-            'bower_components/fancybox/source/jquery.fancybox.pack.js',
+            'Resources/Private/Assets/vendor/jquery/dist/jquery.min.js',
+            'Resources/Private/Assets/vendor/bootstrap-sass/assets/javascripts/bootstrap.min.js',
+            'Resources/Private/Assets/vendor/fancybox/source/jquery.fancybox.pack.js',
             'Resources/Private/Assets/js/main.js'
           ]
         }
@@ -74,7 +74,7 @@ module.exports = function (grunt) {
       fancybox: {
         expand: true,
         flatten: true,
-        cwd: 'bower_components/fancybox',
+        cwd: 'Resources/Private/Assets/vendor/fancybox',
         src: '**/*.{gif,png}',
         dest: 'Resources/Public/images/fancybox/'
       },
@@ -86,7 +86,7 @@ module.exports = function (grunt) {
       },
       fonts: {
         expand: true,
-        cwd: 'bower_components/bootstrap/fonts',
+        cwd: 'Resources/Private/Assets/vendor/bootstrap/fonts',
         src: '**/*.{eot,svg,ttf,woff,woff2}',
         dest: 'Resources/Public/fonts/'
       }

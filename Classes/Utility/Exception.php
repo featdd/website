@@ -26,6 +26,10 @@ namespace Featdd\Website\Utility;
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
+/**
+ * @package website
+ * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
+ */
 class Exception extends \Exception
 {
 }

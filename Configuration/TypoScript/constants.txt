@@ -1,10 +1,10 @@
 plugin.website {
     settings {
-        # cat=website/others; type=string; label=The Websites name
+        # cat=Website Configuration; type=string; label=The Websites name
         sitename = TYPO3
-        # cat=website/others; type=string; label=The Websites name
+        # cat=Website Configuration; type=int; label=The Websites 404 page
         notFoundPageUid = 1
-        # cat=website/others; type=string; label=The Websites name
+        # cat=Website Configuration; type=int; label=The Websites 401 page
         unauthorizedPageUid = 1
     }
 }

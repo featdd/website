@@ -7,9 +7,9 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "jquery": "~2.2.4",
-    "fancybox": "~2.1.5",
-    "bootstrap-sass": "bootstrap-sass-official#~3.3.6"
+    "jquery": "~2.2",
+    "fancybox": "~2.1",
+    "bootstrap-sass": "bootstrap-sass#~3.3"
   },
   "resolutions": {
     "jquery": "~2.2.4"

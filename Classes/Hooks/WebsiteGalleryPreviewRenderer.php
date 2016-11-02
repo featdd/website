@@ -4,7 +4,7 @@ namespace Featdd\Website\Hooks;
 /***************************************************************
  *  Copyright notice
  *
- *  (c) 2016 Daniel Dorndorf <dorndorf@dreipunktnull.com>, dreipunktnull
+ *  (c) 2016 Daniel Dorndorf <dorndorf@featdd.de>
  *
  *  All rights reserved
  *
@@ -30,6 +30,9 @@ use TYPO3\CMS\Backend\View\PageLayoutViewDrawItemHookInterface;
 
 /**
  * Contains a preview rendering for the page module of CType="website_gallery"
+ *
+ * @package website
+ * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  */
 class WebsiteGalleryPreviewRenderer implements PageLayoutViewDrawItemHookInterface {
 

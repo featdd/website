@@ -1,4 +1,3 @@
-bower_components
 node_modules
-Gemfile.lock
+Resources/Private/Assets/vendor
 Resources/Public/*
