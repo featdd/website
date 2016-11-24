@@ -129,6 +129,7 @@ RTE {
 			formatblock.removeItems = h1,h4,h5,h6,section,div,footer,header,nav,aside,blockquote,pre,address,article
 			link.properties.class.allowedClasses = download,pdf
 			pastetoggle.setActiveOnRteOpen = 1
+			link.queryParametersSelector.enabled = 1
 		}
 	}
 
