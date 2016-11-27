@@ -5,10 +5,10 @@
 
 	<f:section name="SidebarRight">
 
-		<section class="content col-xs-12 col-sm-9 col-lg-9">
+		<main class="col-xs-12 col-sm-9 col-lg-9">
 			{content -> f:format.raw()}
-		</section>
-		<aside class="sidebar col-xs-3 col-lg-3">
+		</main>
+		<aside class="col-xs-3 col-lg-3">
 			{sidebar -> f:format.raw()}
 		</aside>
 
@@ -16,12 +16,12 @@
 
 	<f:section name="SidebarLeft">
 
-		<aside class="sidebar col-xs-3 col-lg-3">
+		<aside class="col-xs-3 col-lg-3">
 			{sidebar -> f:format.raw()}
-		</aside>
-		<section class="content col-xs-12 col-sm-9 col-lg-9">
+    </aside>
+		<main class="col-xs-12 col-sm-9 col-lg-9">
 			{content -> f:format.raw()}
-		</section>
+		</main>
 
 	</f:section>
 

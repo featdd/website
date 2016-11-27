@@ -21,6 +21,20 @@ header {
   }
 }
 
+footer {
+  margin-top: 20px;
+
+  @extend .navbar-fixed-bottom;
+  @extend .navbar-default;
+  @extend .navbar;
+
+  > .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 img.scale {
   display: block;
   height: auto;

@@ -4,7 +4,7 @@
 
 	<f:render partial="Header" section="Header" arguments="{_all}"/>
 
-	<section class="main container">
+	<div class="container">
 		<f:if condition="{layout} == 0">
 			<f:then>
 				<f:render section="SidebarLeft"/>
@@ -13,7 +13,7 @@
 				<f:render section="SidebarRight"/>
 			</f:else>
 		</f:if>
-	</section>
+	</div>
 
 	<f:render partial="Footer" section="Footer" arguments="{_all}"/>
 
