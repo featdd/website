@@ -1,3 +1,4 @@
 node_modules
 Resources/Private/Assets/vendor
 Resources/Public/*
+deployment_config.txt
