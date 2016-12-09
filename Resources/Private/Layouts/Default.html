@@ -1,20 +1,20 @@
 <html data-namespace-typo3-fluid="true" lang="en"
-	  xmlns="http://www.w3.org/1999/xhtml"
-	  xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
 
-	<f:render partial="Header" section="Header" arguments="{_all}"/>
+  <f:render partial="Header" section="Header" arguments="{_all}"/>
 
-	<div class="container">
-		<f:if condition="{layout} == 0">
-			<f:then>
-				<f:render section="SidebarLeft"/>
-			</f:then>
-			<f:else>
-				<f:render section="SidebarRight"/>
-			</f:else>
-		</f:if>
-	</div>
+  <div class="container">
+    <f:if condition="{layout} == 0">
+      <f:then>
+        <f:render section="SidebarLeft"/>
+      </f:then>
+      <f:else>
+        <f:render section="SidebarRight"/>
+      </f:else>
+    </f:if>
+  </div>
 
-	<f:render partial="Footer" section="Footer" arguments="{_all}"/>
+  <f:render partial="Footer" section="Footer" arguments="{_all}"/>
 
 </html>
